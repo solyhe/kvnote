@@ -5,7 +5,7 @@ export default {
 };
 
 const API_TOKEN = "changeme";
-const ADMIN_PASS = "changme";
+const ADMIN_PASS = "changeme";
 
 async function handleRequest(request, env) {
 
