@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
 """推送内容到 KV Note。
 用法:
-  python kvnote.py <key> "一段文本"     # 直接推文本
-  python kvnote.py <key> <文件>         # 文件存在则读文件
-  type x.txt | python kvnote.py <key>    # 从标准输入读
-读取: https://txt.cn66.dpdns.org/<key>
+  python kvpush.py <key> "一段文本"     # 直接推文本
+  python kvpush.py <key> <文件>         # 文件存在则读文件
+  type x.txt | python kvpush.py <key>    # 从标准输入读
+读取: https://note.test/<key>
 """
 import io, json, os, sys, urllib.request
 
-PUSH = "https://txt.cn66.dpdns.org/set?token=changeme"
+PUSH = "https://note.test/set?token=changeme"
 
 def push(key, value):
     req = urllib.request.Request(
